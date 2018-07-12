@@ -1,0 +1,72 @@
+ext {
+    android = [
+            compileSdkVersion        : 28,
+            applicationId            : "xueya.xin.yee.xueya",
+            minSdkVersion            : 21,
+            targetSdkVersion         : 28,
+            versionCode              : 1,
+            versionName              : "1.0",
+            testInstrumentationRunner: "0android.support.test.runner.AndroidJUnitRunner"
+    ]
+
+    dependVersion = [
+            support          : "27.0.0",
+            retrofit         : "2.4.0",
+            okhttp           : "3.3.1",
+            anko             : "0.10.5",
+            glide            : "4.7.1",
+            paging_version   : "1.0.0",
+            nav_version      : "1.0.0-alpha02",
+            room_version     : "1.1.1",
+            lifecycle_version: "1.1.1",
+            ktx              : "1.0.0-alpha1",
+            WorkManager      : "1.0.0-alpha04",
+            rxjava           : "2.1.16",
+            dagger           : "2.16"]
+
+    dependencies = [
+            //base
+            "appcompat-v7"       : "com.android.support:appcompat-v7:${dependVersion.support}",
+            "recyclerview-v7"    : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            "design"             : "com.android.support:design:${dependVersion.support}",
+
+            //kotlin
+//            "anko"               : " org.jetbrains.anko:anko:${dependVersion.anko}",
+            "ktx"                : "androidx.core:core-ktx:${dependVersion.ktx}",
+            //glide
+            "glide"              : "com.github.bumptech.glide:glide:${dependVersion.glide}",
+            "glide-compiler"     : "com.github.bumptech.glide:compiler:${dependVersion.glide}",
+
+            //paging
+            "paging"             : "android.arch.paging:runtime:${dependVersion.paging_version}",
+            "paging-common"      : "android.arch.paging:common:${dependVersion.paging_version}",
+            "paging-rxjava"      : "android.arch.paging:rxjava2:1.0.0-rc1",
+
+            //navigation
+            "navigation-fragment": "android.arch.navigation:navigation-fragment:${dependVersion.nav_version}", // use -ktx for Kotlin,
+            "navigation-ui"      : "android.arch.navigation:navigation-ui:${dependVersion.nav_version}", // use -ktx for Kotlin
+
+            //room
+            "room"               : "android.arch.persistence.room:runtime:${dependVersion.room_version}",
+            "room-compile"       : "android.arch.persistence.room:compiler:${dependVersion.room_version}",
+            "room-rxjava"        : "android.arch.persistence.room:rxjava2:${dependVersion.room_version}",
+
+            // ViewModel and LiveData
+            "lifecycle"          : "android.arch.lifecycle:extensions:${dependVersion.lifecycle_version}",
+
+            //WorkManager
+            "workManager"        : "android.arch.work:work-runtime:${dependVersion.WorkManager}",
+
+            //retrofit
+            "retrofit"           : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            "retrofit-rxjava"    : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofit}",
+            "retrofit-gson"      : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
+            //rxjava
+            "rxjava"             : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}",
+            "rxAndroid"          : "io.reactivex.rxjava2:rxandroid:2.0.2",
+
+            //dagger
+            "dagger"             : "com.google.dagger:dagger:${dependVersion.dagger}",
+            "daggercompiler"     : "com.google.dagger:dagger-compiler:${dependVersion.dagger}"
+    ]
+}

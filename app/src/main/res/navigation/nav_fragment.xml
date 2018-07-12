@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/fragment_main">
+
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="xueya.xin.yee.xueya.module.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_video_detail"
+            app:destination="@+id/fragment_video_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_video_detail"
+        android:name="xueya.xin.yee.xueya.module.VideoDetailFragment"
+        android:label="fragment_video_detail"
+        tools:layout="@layout/fragment_video_detail">
+        <action
+            android:id="@+id/action_pop_up_to_fragment_main"
+            app:popUpTo="@layout/fragment_main" />
+    </fragment>
+</navigation>
